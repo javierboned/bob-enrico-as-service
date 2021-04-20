@@ -93,7 +93,12 @@ First, replace <YOUR PROVIDER URI> with a valid node web3 node provider string, 
 provider_uri = <YOUR PROVIDER URI>
 ```
 
-Then, you can run the script in localhost executing the next command:
+Then, install the project dependencies.
+```
+pip install -r requirements.txt
+```
+
+Finally, run the script in localhost executing the next command:
 ```
 python occupancyapi.py
 ```
