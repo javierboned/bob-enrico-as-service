@@ -85,9 +85,9 @@ NuCypher project documentation available at: https://docs.nucypher.com/en/latest
 
 ## Setup
 First, replace `<YOUR PROVIDER URI>` with a valid node web3 node provider string, for example:
-  - ipc:///home/<username>/.ethereum/geth.ipc - IPC Socket-based JSON-RPC server
-  - https://<host> - HTTP(S)-based JSON-RPC server
-  - wss://<host>:8080 - Websocket(Secure)-based JSON-RPC server 
+  - `ipc:///home/<username>/.ethereum/geth.ipc` - IPC Socket-based JSON-RPC server
+  - `https://<host>` - HTTP(S)-based JSON-RPC server
+  - `wss://<host>:8080` - Websocket(Secure)-based JSON-RPC server 
 
 ```Python
 provider_uri = <YOUR PROVIDER URI>
