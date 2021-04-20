@@ -98,5 +98,31 @@ Then, you can run the script in localhost executing the next command:
 python occupancyapi.py
 ```
 
-## Recomendation
+# Enrico as Service
+NuCypher Enrico character implementation as external HTTP Service.
+
+## API Routes
+To increase security, the API only works with POST requests.
+
+### Encrypt Message
+The "Encrypt Message" function creates a new Enrico object from a policy key and encrypting the received clear data. Then, it returns the the public key of the created Enrico object and the ciphertext.
+
+```Python
+class EncryptMessage(Resource):
+    def get(self):
+        return 'Please, do POST request.'
+    def post(self):
+        policy_key = request.json['policy_pubkey']
+        data = request.json['data']
+        enrico = Enrico(policy_encrypting_key=UmbralPublicKey.from_bytes(bytes.fromhex(policy_key)))
+        message_kit, _signature = enrico.encrypt_message(data.encode())
+        result = {}
+        result["ciphertext"] = message_kit.to_bytes().hex()
+        result["enrico"] = bytes(enrico.stamp).hex()
+        return json.dumps(result)
+```
+
+
+
+# Recomendation
 I reccomend follow <a href="https://www.digitalocean.com/community/tutorials/how-to-serve-flask-applications-with-uswgi-and-nginx-on-ubuntu-18-04">this</a> Digital Ocean tutorial to be able to publish it and use the HTTPS protocol. It has been tested and the result has been extremely satisfactory.
