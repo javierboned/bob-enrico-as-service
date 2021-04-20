@@ -99,4 +99,4 @@ python occupancyapi.py
 ```
 
 ## Recomendation
-I reccomend follow <a href="https://www.digitalocean.com/community/tutorials/how-to-serve-flask-applications-with-uswgi-and-nginx-on-ubuntu-18-04">this</a> Digital Ocean tutorial to be able to publish it and use the HTTPS protocol.
+I reccomend follow <a href="https://www.digitalocean.com/community/tutorials/how-to-serve-flask-applications-with-uswgi-and-nginx-on-ubuntu-18-04">this</a> Digital Ocean tutorial to be able to publish it and use the HTTPS protocol. It has been tested and the result has been extremely satisfactory.
