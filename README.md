@@ -3,7 +3,7 @@ NuCypher Bob character implementation as external HTTP Service.
 
 ## Description
 NuCypher is a decentralized cryptological network offering accessible, intuitive, and extensible runtimes and interfaces for secrets management and dynamic access control.
-<img src="https://docs.nucypher.com/en/latest/.static/img/nucypher_overview.svg"></img>
+<a href="https://ibb.co/WzHg0p7"><img src="https://i.ibb.co/n1wzB84/Captura-de-pantalla-2021-04-20-a-las-9-37-20.png" alt="Captura-de-pantalla-2021-04-20-a-las-9-37-20" border="0"></a>
 
 ## Documentation
 NuCypher project documentation available at: https://docs.nucypher.com/en/latest/
