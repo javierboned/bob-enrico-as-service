@@ -95,12 +95,12 @@ provider_uri = <YOUR PROVIDER URI>
 
 Then, install the project dependencies.
 ```
-pip install -r requirements.txt
+$ pip install -r requirements.txt
 ```
 
 Finally, run the script in localhost executing the next command:
 ```
-python occupancyapi.py
+$ python occupancyapi.py
 ```
 
 # Enrico as Service
