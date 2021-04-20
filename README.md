@@ -6,7 +6,7 @@ NuCypher is a decentralized cryptological network offering accessible, intuitive
 
 <a href="https://ibb.co/WzHg0p7"><img src="https://i.ibb.co/n1wzB84/Captura-de-pantalla-2021-04-20-a-las-9-37-20.png" alt="Captura-de-pantalla-2021-04-20-a-las-9-37-20" border="0"></a>
 
-This project implements an HTTP FLASK API that aims to simulate the Bob character in the NuCypher network (using Lynx Testnet) eliminating data persistence and trying to simulate as best as possible a fictitious client-side implementation of NuCypher (JavaScript).
+This project implements an HTTP FLASK API that aims to simulate the Bob character in the NuCypher network (using Lynx Testnet) eliminating data persistence and trying to simulate as good as possible a fictitious client-side implementation of NuCypher (JavaScript).
 
 ## API Routes
 To increase security, the API only works with POST requests.
