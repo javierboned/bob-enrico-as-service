@@ -93,3 +93,10 @@ First, replace <YOUR PROVIDER URI> with a valid node web3 node provider string, 
 provider_uri = <YOUR PROVIDER URI>
 ```
 
+Then, you can run the script in localhost executing the next command:
+```
+python occupancyapi.py
+```
+
+## Recomendation
+I reccomend follow <a href="https://www.digitalocean.com/community/tutorials/how-to-serve-flask-applications-with-uswgi-and-nginx-on-ubuntu-18-04">this</a> Digital Ocean tutorial to be able to publish it and use the HTTPS protocol.
