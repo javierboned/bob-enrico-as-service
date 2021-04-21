@@ -1,4 +1,3 @@
-from nucypher.blockchain.eth.interfaces import BlockchainInterfaceFactory
 from nucypher.characters.lawful import Bob, Ursula, Enrico
 from nucypher.config.keyring import NucypherKeyring
 from nucypher.crypto.kits import UmbralMessageKit
@@ -18,8 +17,6 @@ import os
 app = Flask(__name__)
 cors = CORS(app, resources={r"/*": {"origins": "*"}})
 api = Api(app)
-provider_uri = '/home/occupancy-api/.ethereum/goerli/geth.ipc'
-BlockchainInterfaceFactory.get_or_create_interface(provider_uri)
 
 class Retrieve(Resource):
     SEED_URI         = "lynx.nucypher.network:9151"
@@ -36,7 +33,7 @@ class Retrieve(Resource):
         keyring=NucypherKeyring(account=address,keyring_root="./keys")
         keyring.unlock(password=passwd)   
         
-        bob = Bob(known_nodes=[self.URSULA], checksum_address=address,domain='lynx',keyring=keyring,provider_uri=provider_uri)  
+        bob = Bob(known_nodes=[self.URSULA], checksum_address=address, domain='lynx',keyring=keyring)  
         
         enrico_key = request.json['enrico_key']
         policy_key  = request.json['policy_key']
@@ -116,7 +113,7 @@ class JoinPolicy(Resource):
         passwd = PBKDF2(password, address.encode(), 20,count=30000,hmac_hash_module=SHA256).hex()
         keyring=NucypherKeyring(account=address,keyring_root="./keys")
         keyring.unlock(password=passwd)
-        bob = Bob(known_nodes=[self.URSULA], checksum_address=address,domain='lynx',keyring=keyring,provider_uri=provider_uri)  
+        bob = Bob(known_nodes=[self.URSULA], checksum_address=address,domain='lynx',keyring=keyring)  
         alice_pubkey_umbral = UmbralPublicKey.from_bytes(bytes.fromhex(alice_pubkey))
         bob.join_policy(label.encode(), alice_verifying_key=alice_pubkey_umbral,block=True)
         self.readAndDeleteKeys(address,keyring) # delete keys
